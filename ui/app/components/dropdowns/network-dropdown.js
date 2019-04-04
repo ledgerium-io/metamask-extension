@@ -298,11 +298,11 @@ NetworkDropdown.prototype.renderCommonRpc = function (rpcListDetail, provider) {
 
   return reversedRpcListDetail.map((entry) => {
     const rpc = entry.rpcUrl
-    const ticker = entry.ticker || 'ETH'
+    const ticker = entry.ticker || 'XLG'
     const nickname = entry.nickname || ''
     const currentRpcTarget = provider.type === 'rpc' && rpc === provider.rpcTarget
 
-    if ((rpc === 'http://localhost:8545') || currentRpcTarget) {
+    if ((rpc === 'http://testnet.ledgerium.net:8545') || currentRpcTarget) {
       return null
     } else {
       const chainId = entry.chainId
@@ -348,7 +348,7 @@ NetworkDropdown.prototype.renderCustomOption = function (provider) {
 
   switch (rpcTarget) {
 
-    case 'http://localhost:8545':
+    case 'http://testnet.ledgerium.net:8545':
       return null
 
     default:

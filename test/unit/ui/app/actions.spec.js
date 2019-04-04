@@ -1123,7 +1123,7 @@ describe('Actions', () => {
 
     it('', () => {
       const store = mockStore()
-      store.dispatch(actions.setRpcTarget('http://localhost:8545'))
+      store.dispatch(actions.setRpcTarget('http://testnet.ledgerium.net:8545'))
       assert(setRpcTargetSpy.calledOnce)
     })
 

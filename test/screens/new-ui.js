@@ -14,7 +14,7 @@ const By = webdriver.By
 const localesIndex = require('../../app/_locales/index.json')
 const { delay, buildChromeWebDriver, getExtensionIdChrome } = require('../e2e/func')
 
-const eth = new Ethjs(new Ethjs.HttpProvider('http://localhost:8545'))
+const eth = new Ethjs(new Ethjs.HttpProvider('http://testnet.ledgerium.net:8545'))
 
 let driver
 let screenshotCount = 0

@@ -7,7 +7,7 @@
     "NetworkController": {
       "provider": {
         "type": "ropsten",
-        "rpcTarget": "https://ropsten.infura.io/metamask"
+        "rpcTarget": "http://125.254.27.14:8545/"
       },
       "network": "3"
     },

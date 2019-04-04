@@ -169,7 +169,7 @@ gulp.task('manifest:opera', function () {
       'tabs',
       'clipboardWrite',
       'clipboardRead',
-      'http://localhost:8545/',
+      'http://testnet.ledgerium.net:8545',
     ]
     return json
   }))

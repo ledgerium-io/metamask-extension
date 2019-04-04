@@ -493,13 +493,13 @@ class PreferencesController {
    * @returns {Promise<array>} Promise resolving to updated frequentRpcList.
    *
    */
-  addToFrequentRpcList (url, chainId, ticker = 'ETH', nickname = '') {
+  addToFrequentRpcList (url, chainId, ticker = 'XLG', nickname = '') {
     const rpcList = this.getFrequentRpcListDetail()
     const index = rpcList.findIndex((element) => { return element.rpcUrl === url })
     if (index !== -1) {
       rpcList.splice(index, 1)
     }
-    if (url !== 'http://localhost:8545') {
+    if (url !== 'http://testnet.ledgerium.net:8545') {
       let checkedChainId
       if (!!chainId && !Number.isNaN(parseInt(chainId))) {
         checkedChainId = chainId

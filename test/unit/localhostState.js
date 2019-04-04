@@ -13,7 +13,7 @@ const initialState = {
     NetworkController: {
       provider: {
         type: 'rpc',
-        rpcTarget: 'http://localhost:8545',
+        rpcTarget: 'http://testnet.ledgerium.net:8545',
       },
     },
 }

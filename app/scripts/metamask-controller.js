@@ -1528,7 +1528,7 @@ module.exports = class MetamaskController extends EventEmitter {
       this.currencyController.setCurrentCurrency(currencyCode)
       this.currencyController.updateConversionRate()
       const data = {
-        nativeCurrency: ticker || 'ETH',
+        nativeCurrency: ticker || 'XLG',
         conversionRate: this.currencyController.getConversionRate(),
         currentCurrency: this.currencyController.getCurrentCurrency(),
         conversionDate: this.currencyController.getConversionDate(),
@@ -1572,7 +1572,7 @@ module.exports = class MetamaskController extends EventEmitter {
    * @returns {Promise<String>} - The RPC Target URL confirmed.
    */
 
-  async updateAndSetCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname) {
+  async updateAndSetCustomRpc (rpcUrl, chainId, ticker = 'XLG', nickname) {
     await this.preferencesController.updateRpc({ rpcUrl, chainId, ticker, nickname })
     this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname)
     return rpcUrl
@@ -1587,7 +1587,7 @@ module.exports = class MetamaskController extends EventEmitter {
    * @param {string} nickname - Optional nickname of the selected network.
    * @returns {Promise<String>} - The RPC Target URL confirmed.
    */
-  async setCustomRpc (rpcTarget, chainId, ticker = 'ETH', nickname = '') {
+  async setCustomRpc (rpcTarget, chainId, ticker = 'XLG', nickname = '') {
     const frequentRpcListDetail = this.preferencesController.getFrequentRpcListDetail()
     const rpcSettings = frequentRpcListDetail.find((rpc) => rpcTarget === rpc.rpcUrl)
 
