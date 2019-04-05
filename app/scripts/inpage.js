@@ -153,14 +153,14 @@ const proxiedInpageProvider = new Proxy(inpageProvider, {
   deleteProperty: () => true,
 })
 
-window.ethereum = createStandardProvider(proxiedInpageProvider)
+window.ledgerium = createStandardProvider(proxiedInpageProvider)
 
 // detect eth_requestAccounts and pipe to enable for now
 function detectAccountRequest (method) {
   const originalMethod = inpageProvider[method]
   inpageProvider[method] = function ({ method }) {
     if (method === 'eth_requestAccounts') {
-      return window.ethereum.enable()
+      return window.ledgerium.enable()
     }
     return originalMethod.apply(this, arguments)
   }
