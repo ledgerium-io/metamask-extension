@@ -22,7 +22,6 @@ temp
 app/.DS_Store
 
 coverage/
-dist
 builds/
 disc/
 builds.zip
